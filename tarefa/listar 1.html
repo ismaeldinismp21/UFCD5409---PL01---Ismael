@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lista de Eletrodomésticos</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+<header>
+  <div class="container">
+    <img src="https://www.gov.br/defesa/pt-br/assuntos/projeto-rondon/downloads/comunicacao-social/logo-rondon-png.png" alt="Logo" style="width: 50px;">
+    <span style="font-size: 24px; font-weight: bold;">Gestão de Stock</span>
+  </div>
+</header>
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container">
+    <a class="navbar-brand" href="listar.html">Página Inicial</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="adicionar.html">Adicionar</a>
+        </li>
+        <li class="nav-item">
+          <button id="logoutButton" class="btn btn-danger ml-2">Logout</button>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="container mt-5">
+  <h2>Lista de Eletrodomésticos</h2>
+
+  <input type="text" id="searchInput" placeholder="Pesquisar por nome..." oninput="searchStock()">
+
+  <table class="table">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Nome</th>
+        <th>Marca</th>
+        <th>Modelo</th>
+        <th>Preço</th>
+        <th onclick="sortStockByQuantity()">Quantidade em Stock</th>
+        <th>Ações</th> 
+      </tr>
+    </thead>
+    <tbody id="stockList">
+    </tbody>
+  </table>
+</div>
+
+<footer class="footer mt-5">
+  <div class="container text-center">
+    <span class="text-muted">© 2024 Gestão de Stock By Ismael Pinheiro using bootstrap</span>
+  </div>
+</footer>
+
+
+<script src="listar.js"></script>
+</body>
+</html>
